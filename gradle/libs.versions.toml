@@ -19,9 +19,11 @@ silly-collection-version = "28.1"
 silly-io-version = "3.2"
 test-object-version = "9"
 throwable-version = "3"
+md2odt-version = "1.0.0"
 
 [libraries]
 assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertj-core-version" }
+md2odt = { module = "io.github.astrapi69:MD2odt", version.ref = "md2odt-version" }
 commons-text = { module = "org.apache.commons:commons-text", version.ref = "commons-text-version" }
 equalsverifier = { module = "nl.jqno.equalsverifier:equalsverifier", version.ref = "equalsverifier-version" }
 file-worker = { module = "io.github.astrapi69:file-worker", version.ref = "file-worker-version" }
@@ -46,6 +48,10 @@ annotation-processor = [
 # Dependencies required only at compile-time and not included in the final artifact
 compile-only = [
     "lombok",
+]
+# Bundle of the core dependencies
+core-dependencies = [
+    "md2odt",
 ]
 # Annotation processor dependencies used specifically for test classes
 test-annotation-processor = [
